@@ -53,8 +53,9 @@
       chips.forEach((c, j) => c.classList.toggle("on", j === k));
       // on the home page the whole top takes the edition's world: colour, type, mood
       const world = scenes[k].dataset.world, hero = scenes[k].closest(".hero"), bar = q(".nav");
-      if (world && chips.length) { if (hero) hero.dataset.world = world; if (bar) bar.dataset.world = world; }
-      if (rot && chips[k]) { rot.classList.remove("in"); void rot.offsetWidth; rot.textContent = chips[k].dataset.word; rot.classList.add("in"); }
+      if (world && scenes.length > 1) { if (hero) hero.dataset.world = world; if (bar) bar.dataset.world = world; }
+      const word = scenes[k].dataset.word;
+      if (rot && word) { rot.classList.remove("in"); void rot.offsetWidth; rot.textContent = word; rot.classList.add("in"); }
       const frozen = P.get("step");
       if (frozen !== null || still) { const n = frozen !== null ? +frozen : 9; for (let i = 1; i <= 9; i++) scenes[k].classList.toggle("s" + i, i <= n); return; }
       stop = play(scenes[k], scenes.length > 1 ? () => show((k + 1) % scenes.length) : null);

@@ -29,7 +29,7 @@ footer .logo svg { height: 18px; }
 .hero .lede, .hero .since, .hero .note { color: var(--hm); transition: color 0.5s; }
 .hero .sub { color: var(--hf); }
 .hero h1 { transition: letter-spacing 0.4s; }
-.hero[data-world="arch"] h1, .hero[data-world="arch"] .sub { font-family: Fraunces, Georgia, serif; font-weight: 500; letter-spacing: -0.015em; }
+.hero[data-world="arch"] h1, .hero[data-world="arch"] .sub { font-family: "Source Serif 4", Georgia, serif; font-weight: 500; letter-spacing: -0.015em; }
 .hero[data-world="soc"] h1 { font-weight: 800; letter-spacing: -0.035em; }
 .hero[data-world="arch"] .btn.ghost.inv, .t-arch .hero .btn.ghost.inv { color: #1E2420; border-color: rgba(30, 36, 32, 0.45); }
 .scene-tabs button { border-color: var(--hl); color: var(--hm); }
@@ -97,7 +97,7 @@ footer .logo svg { height: 18px; }
 .ed.w-arch .vis { background: repeating-linear-gradient(0deg, rgba(30, 36, 32, 0.05) 0 1px, transparent 1px 30px), #F5F1E8; }
 .ed.w-arch .frames { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .ed.w-arch .fr:not(.m) { opacity: 0.5; }
-.ed.w-arch h3 { font-family: Fraunces, Georgia, serif; font-weight: 500; }
+.ed.w-arch h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 500; }
 .ed.w-arch:hover { border-color: #8A560C; }
 .ed.w-soc { border-radius: 26px; overflow: hidden; border-color: #DDD6F5; }
 .ed.w-soc .vis { background: linear-gradient(135deg, #1F1158, #5B3FE0 60%, #9B7BFF); flex-direction: row; justify-content: center; align-items: flex-end; padding-bottom: 0; overflow: hidden; }
@@ -110,7 +110,7 @@ footer .logo svg { height: 18px; }
 
 /* ---------- the archives page ---------- */
 .t-arch { background: #F5F1E8; color: #1E2420; --ink: #1E2420; --mist: #EDE7D9; --line: #D2CAB8; --mute: #5F6258; --paper: #FFFDF8; }
-.t-arch h1, .t-arch h2, .t-arch h3 { font-family: Fraunces, Georgia, serif; font-weight: 500; letter-spacing: -0.015em; }
+.t-arch h1, .t-arch h2, .t-arch h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 500; letter-spacing: -0.015em; }
 .t-arch .nav, .t-soc .nav { color: var(--ink); border-color: var(--line); }
 .t-arch .nav { background: rgba(245, 241, 232, 0.93); }
 .t-arch .nav ul a, .t-soc .nav ul a { color: var(--mute); }
@@ -120,7 +120,7 @@ footer .logo svg { height: 18px; }
 .t-arch .rv { transition-duration: 1.1s; }
 .t-arch .ui-sec { background: #EDE7D9; }
 .t-arch .tabs { gap: 4px; margin-bottom: 0; padding-left: 16px; position: relative; z-index: 1; align-items: flex-end; }
-.t-arch .tabs button { font: 500 16px Fraunces, Georgia, serif; border: 1px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; background: #E2DAC8; color: var(--mute); padding: 9px 20px; }
+.t-arch .tabs button { font: 500 16px "Source Serif 4", Georgia, serif; border: 1px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; background: #E2DAC8; color: var(--mute); padding: 9px 20px; }
 .t-arch .tabs button:hover { transform: none; border-color: var(--line); color: var(--ink); background: #EBE4D4; }
 .t-arch .tabs button.on { background: #FFFDF8; color: var(--ink); padding-top: 13px; box-shadow: inset 0 3px 0 var(--green); }
 .t-arch .win { display: grid; grid-template-columns: 196px minmax(0, 1fr); background: #FFFDF8; box-shadow: 0 30px 60px rgba(60, 45, 20, 0.16); }
@@ -130,10 +130,10 @@ footer .logo svg { height: 18px; }
 .win[data-cur="lib"] .aside [data-for="lib"], .win[data-cur="film"] .aside [data-for="film"], .win[data-cur="ask"] .aside [data-for="ask"], .win[data-cur="res"] .aside [data-for="res"] { background: #35483C; color: #fff; }
 .crumb { padding: 12px 18px; border-bottom: 1px solid var(--line); font: 600 11px Inter, sans-serif; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mute); }
 .crumb em { font-style: normal; color: var(--green-deep); }
-.ptitle { font: 500 27px/1.15 Fraunces, Georgia, serif; margin: 0 0 14px; letter-spacing: -0.01em; }
+.ptitle { font: 500 27px/1.15 "Source Serif 4", Georgia, serif; margin: 0 0 14px; letter-spacing: -0.01em; }
 .t-arch .pbody { min-height: 420px; }
 .t-arch .acard { background: #fff; }
-.t-arch .acard b { font: 500 17px/1.3 Fraunces, Georgia, serif; }
+.t-arch .acard b { font: 500 17px/1.3 "Source Serif 4", Georgia, serif; }
 .t-arch .acard .th { background: linear-gradient(170deg, #D6CDB9, #A2977F); --l1: #8D826C; --l2: #776D59; }
 .t-arch .acard:nth-child(2n) .th { background: linear-gradient(170deg, #5D5546, #2F2B22); --l1: #6D6452; --l2: #7C725E; }
 .t-arch .vid { background: linear-gradient(180deg, #5D5546, #2A261E); --l1: #6D6452; --l2: #7C725E; }
@@ -245,7 +245,7 @@ footer .logo svg { height: 18px; }
 .scene-tabs { gap: 10px; margin-bottom: 18px; align-items: flex-end; }
 .scene-tabs button { border: 1.5px solid rgba(255, 255, 255, 0.6); padding: 11px 20px; opacity: 0.8; transition: transform 0.25s var(--ease), opacity 0.2s, outline-color 0.3s; outline: 2px solid transparent; outline-offset: 3px; }
 .scene-tabs button[data-w="tv"] { background: #14D06C; color: #0B0D0C; border-radius: 0; font: 600 15px Inter, sans-serif; }
-.scene-tabs button[data-w="arch"] { background: #C8811A; color: #1E2420; border-radius: 11px 11px 0 0; font: 600 16.5px Fraunces, Georgia, serif; }
+.scene-tabs button[data-w="arch"] { background: #C8811A; color: #1E2420; border-radius: 11px 11px 0 0; font: 600 16.5px "Source Serif 4", Georgia, serif; }
 .scene-tabs button[data-w="soc"] { background: #7C5CFF; color: #fff; border-radius: 999px; font: 800 15.5px Outfit, sans-serif; letter-spacing: -0.01em; }
 .scene-tabs button[data-w]:hover { opacity: 1; transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.9); }
 .scene-tabs button[data-w].on { opacity: 1; transform: translateY(-3px) scale(1.06); outline-color: var(--hf); border-color: rgba(255, 255, 255, 0.9); }
