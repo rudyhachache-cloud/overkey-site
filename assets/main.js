@@ -114,7 +114,10 @@
       const on = mini.classList.toggle("aired");
       take.textContent = on ? "Clear" : "Take";
       take.classList.toggle("pulse-btn", !on);
-      if (label) label.textContent = on ? "On air. That was the only way it could get there." : "Press it. Nothing reaches the screen any other way.";
+      const ar = d.documentElement.lang === "ar";
+      if (label) label.textContent = on
+        ? (ar ? "على الهواء. وما كان ليصل إليها بطريقة أخرى." : "On air. That was the only way it could get there.")
+        : (ar ? "اضغطوا عليه. لا شيء يصل إلى الشاشة بطريقة أخرى." : "Press it. Nothing reaches the screen any other way.");
     });
   }
 })();
