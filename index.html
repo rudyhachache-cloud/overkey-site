@@ -18,11 +18,12 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;600&family=Outfit:wght@500;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/main.css">
 <link rel="stylesheet" href="assets/platform.css">
+<link rel="stylesheet" href="assets/worlds.css">
 </head>
-<body>
+<body class="t-home">
 <header class="nav">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Overkey"><svg viewBox="0 0 667 100" role="img" aria-label="Overkey"><path class="lg-ring" fill="#fff" d="M1.01,60 A50,50 0 1 1 98.99,60 H83.54 A35,35 0 1 0 16.46,60 Z"/><path class="lg-strap" fill="#14D06C" d="M2.98,67 H97.02 A50,50 0 0 1 2.98,67 Z"/><path class="lg-let" fill="#fff" d="M130.2,0 L162.3,79.88 L194.4,0 L210.56,0 L170.38,100 L154.22,100 L114.04,0 Z M227,0 H293 V15 H242 V42.5 H285 V57.5 H242 V85 H293 V100 H227 Z M317,0 H355 A30.75,30.75 0 0 1 355,61.5 H332 V100 H317 Z M332,15 V46.5 H355 A15.75,15.75 0 0 0 355,15 Z M356.47,50.21 L385.66,100 L368.27,100 L343.53,57.79 Z M408,0 L423,0 L423,100 L408,100 Z M415.5,53.31 L460.16,0 L479.73,0 L415.5,76.67 Z M444.48,34.23 L482.7,100 L465.35,100 L431.52,41.77 Z M499,0 H565 V15 H514 V42.5 H557 V57.5 H514 V85 H565 V100 H499 Z M595.01,0 L622,40.48 L648.99,0 L667.01,0 L622,67.52 L576.99,0 Z M614.5,50 L629.5,50 L629.5,100 L614.5,100 Z"/></svg></a>
@@ -38,7 +39,7 @@
 
 <main id="top">
 
-<div class="hero">
+<div class="hero" data-world="tv">
   <div class="wrap">
     <div>
       <p class="eyebrow rv">AI for footage and speech</p>
@@ -59,7 +60,7 @@
         <button type="button" data-word="social desk.">Social</button>
       </div>
       <div class="stagebox">
-      <div class="scene sc-tv on" data-hold="900,1100,1000,1100,1900,1500,450,4600" role="img" aria-label="Animation: a guest's claim is caught in the live transcript, checked, and sent to air as a graphic when the producer presses Take">
+      <div class="scene sc-tv on" data-world="tv" data-hold="900,1100,1000,1100,1900,1500,450,4600" role="img" aria-label="Animation: a guest's claim is caught in the live transcript, checked, and sent to air as a graphic when the producer presses Take">
         <div class="app-bar"><span class="live-dot"></span><b>Live</b><span class="clock">21:42</span><span class="who"><i class="on" dir="rtl">ليلى حداد</i><i dir="rtl">كريم منصور</i></span></div>
         <div class="app-body">
           <div class="tx" dir="rtl">
@@ -87,34 +88,19 @@
           </div>
         </div>
       </div>
-      <div class="scene sc-arch" data-hold="800,1300,1000,1200,1500,700,4200" role="img" aria-label="Animation: a word is searched across an archive, a passage opens at its second in the film, and is saved to a chapter">
-        <div class="app-bar"><b>Archive</b><span class="clock">310 hours · 24 collections</span><span class="who"><i class="on">Search</i><i>Ask the archive</i></span></div>
-        <div class="app-body">
-          <div class="aq">
-            <div class="qbox"><span class="typed">الميناء</span><span class="caret"></span></div>
-            <div class="res" style="--k:0"><span class="th"><i class="hills"></i></span><span class="u-t">Reel 14 · 02:10</span><span class="u-ar" dir="rtl">افتُتح <mark>الميناء</mark> الجديد في ذلك الصيف.</span></div>
-            <div class="res pick" style="--k:1"><span class="th"><i class="hills"></i></span><span class="u-t">Interview 3 · 12:44</span><span class="u-ar" dir="rtl">كنّا ننزل على <mark>الميناء</mark> كل يوم الصبح.</span></div>
-            <div class="res" style="--k:2"><span class="th"><i class="hills"></i></span><span class="u-t">Film 2 · 41:07</span><span class="u-ar" dir="rtl"><mark>الميناء</mark> غيّر وجه المدينة كلّها.</span></div>
-          </div>
-          <div class="av">
-            <div class="pgm"><i class="hills"></i><span class="tc">Interview 3 · 00:12:44</span></div>
-            <div class="pass"><div class="row"><span class="chip ok" dir="rtl">سليم خوري</span><span class="chip line">Name confirmed</span></div><p dir="rtl">كنّا ننزل على الميناء كل يوم الصبح، والبواخر كانت تعبّي المرفأ.</p></div>
-            <div class="act"><span class="btn key save">Save to chapter</span><span class="saved">Saved · Chapter 1</span></div>
-          </div>
+      <div class="scene sc-wall" data-world="arch" data-hold="700,1300,1400,1500,700,4200" role="img" aria-label="Animation: a word is searched across a wall of archive footage, the matching films light up, one passage opens with its speaker named, and it is saved to a chapter">
+        <div class="wall-top"><div class="qbox lite"><span class="typed">الميناء</span><span class="caret"></span></div><span class="hits">41 passages · 9 films</span></div>
+        <div class="frames"><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><div class="fig a"><i></i><i></i></div><span></span></div><div class="fr m"><i class="hills"></i><span>Reel 14 · 02:10</span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><div class="fig a"><i></i><i></i></div><span></span></div><div class="fr m pick"><i class="hills"></i><span>Interview 3 · 12:44</span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><div class="fig a"><i></i><i></i></div><span></span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr m"><i class="hills"></i><span>Film 2 · 41:07</span></div></div>
+        <div class="pcard">
+          <div class="row"><span class="chip ok" dir="rtl">سليم خوري</span><span class="chip line">Name confirmed</span><span class="u-t">Interview 3 · 00:12:44</span></div>
+          <p dir="rtl">كنّا ننزل على الميناء كل يوم الصبح، والبواخر كانت تعبّي المرفأ.</p>
+          <div class="act"><span class="btn key save">Save to chapter</span><span class="saved">Saved · Chapter 1</span></div>
         </div>
       </div>
-      <div class="scene sc-soc" data-hold="800,1300,1100,1200,1500,1300,4200" role="img" aria-label="Animation: moments worth posting are suggested during a show, one is cut into a vertical clip with captions, and the video, thumbnail and caption come out ready">
-        <div class="app-bar"><span class="live-dot"></span><b>Social</b><span class="clock">21:44</span><span class="who"><i class="on">Suggesting every 3 min</i></span></div>
-        <div class="app-body">
-          <div class="sq">
-            <div class="sug a1"><h6 dir="rtl">وعد على الهواء: الخطة قبل آخر السنة</h6><p dir="rtl">أنا بوعدكن الخطة بتخلص قبل آخر السنة.</p><div class="row"><span class="chip line">21:43 · 24 s</span><span class="chip ok">Export</span></div></div>
-            <div class="sug a2"><h6 dir="rtl">جدل حول رقم البطالة</h6><p dir="rtl">هيدا الرقم مش دقيق أبداً.</p><div class="row"><span class="chip line">21:42 · 31 s</span></div></div>
-          </div>
-          <div class="sv">
-            <div class="reelbox"><div class="fig a"><i></i><i></i></div><div class="cap" dir="rtl">الخطة بتخلص <mark>قبل آخر السنة</mark></div></div>
-            <div class="kit"><span>Building the clip</span><div class="bar"></div><ul><li style="--k:0">Vertical video</li><li style="--k:1">Thumbnail</li><li style="--k:2">Social caption</li></ul></div>
-          </div>
-        </div>
+      <div class="scene sc-phones" data-world="soc" data-hold="400,1000,1700,5200" role="img" aria-label="Animation: three phones play vertical clips with captions, cut from moments suggested during a show, and each comes out ready to post">
+        <div class="phones"><div class="fone p1"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>هيدا الرقم <b>مش دقيق</b></span><span>الإحصاءات <b>بتقول غير هيك</b></span></div></div><div class="fone p2 big"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>أنا <b>بوعدكن</b></span><span>الخطة بتخلص <b>قبل آخر السنة</b></span></div></div><div class="fone p3"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>منشوف</span><span>الناس <b>ناطرة أفعال</b></span></div></div></div>
+        <span class="fl f1">Suggested at 21:43</span><span class="fl f2">9:16 · follows the speaker</span><span class="fl f3">AR · EN · FR</span>
+        <div class="toast"><b>Ready to post</b><span>Video</span><span>Thumbnail</span><span>Caption</span></div>
       </div>
       </div>
       <p class="note">Illustrations with sample data.</p>
@@ -152,10 +138,10 @@
   <div class="wrap">
     <div class="head rv">
       <h2>Three editions, ready today.</h2>
-      <p>Each is the same engine with a different interface. Start with the one closest to your team.</p>
+      <p>Each is the same engine in its own interface. Start with the one closest to your team.</p>
     </div>
     <div class="eds">
-      <a class="ed rv" href="tv.html">
+      <a class="ed w-tv rv" href="tv.html">
         <div class="vis"><div class="mini"><span class="tally">ON AIR</span><div class="fig a"><i></i><i></i></div><div class="plate" dir="rtl"><span>نسبة البطالة الرسمية بالمئة</span><b>14.2</b></div></div></div>
         <div class="bd">
           <span class="n">Live television</span>
@@ -165,11 +151,10 @@
           <span class="open">See the edition</span>
         </div>
       </a>
-      <a class="ed rv" style="--d:.12s" href="archives.html">
+      <a class="ed w-arch rv" style="--d:.12s" href="archives.html">
         <div class="vis">
-          <div class="qbox"><span class="typed">الميناء</span><span class="caret"></span></div>
-          <div class="res" style="--k:0"><span class="th"><i class="hills"></i></span><span class="u-t">Reel 14 · 02:10</span><span class="u-ar" dir="rtl">افتُتح <mark>الميناء</mark> الجديد.</span></div>
-          <div class="res" style="--k:1"><span class="th"><i class="hills"></i></span><span class="u-t">Interview 3 · 12:44</span><span class="u-ar" dir="rtl">كنّا ننزل على <mark>الميناء</mark>.</span></div>
+          <div class="qbox lite"><span class="typed">الميناء</span><span class="caret"></span></div>
+          <div class="frames"><div class="fr"><i class="hills"></i><span></span></div><div class="fr m"><i class="hills"></i><div class="fig a"><i></i><i></i></div><span>Reel 14</span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr m"><i class="hills"></i><span>Interview 3</span></div><div class="fr"><i class="hills"></i><span></span></div><div class="fr"><i class="hills"></i><div class="fig a"><i></i><i></i></div><span></span></div></div>
         </div>
         <div class="bd">
           <span class="n">Archives</span>
@@ -179,8 +164,8 @@
           <span class="open">See the edition</span>
         </div>
       </a>
-      <a class="ed rv" style="--d:.24s" href="social.html">
-        <div class="vis"><div class="sv"><div class="reelbox" style="width:34%"><div class="fig a"><i></i><i></i></div><div class="cap" dir="rtl">الخطة <mark>قبل آخر السنة</mark></div></div><div class="kit"><span>Clip ready</span><div class="bar"></div><ul><li>Vertical video</li><li>Thumbnail</li><li>Social caption</li></ul></div></div></div>
+      <a class="ed w-soc rv" style="--d:.24s" href="social.html">
+        <div class="vis"><div class="fone p1"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>هيدا الرقم <b>مش دقيق</b></span><span>الإحصاءات <b>بتقول غير هيك</b></span></div></div><div class="fone p2 big"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>أنا <b>بوعدكن</b></span><span>الخطة بتخلص <b>قبل آخر السنة</b></span></div></div><div class="fone p3"><i class="story"></i><div class="fig a"><i></i><i></i></div><div class="cap2" dir="rtl"><span>منشوف</span><span>الناس <b>ناطرة أفعال</b></span></div></div></div>
         <div class="bd">
           <span class="n">Social and digital</span>
           <h3>The social desk</h3>
@@ -239,7 +224,7 @@
 
 <footer>
   <div class="wrap">
-    <img src="assets/overkey-logo-reversed.svg" alt="Overkey">
+    <span class="logo still"><svg viewBox="0 0 667 100" role="img" aria-label="Overkey"><path class="lg-ring" fill="#fff" d="M1.01,60 A50,50 0 1 1 98.99,60 H83.54 A35,35 0 1 0 16.46,60 Z"/><path class="lg-strap" fill="#14D06C" d="M2.98,67 H97.02 A50,50 0 0 1 2.98,67 Z"/><path class="lg-let" fill="#fff" d="M130.2,0 L162.3,79.88 L194.4,0 L210.56,0 L170.38,100 L154.22,100 L114.04,0 Z M227,0 H293 V15 H242 V42.5 H285 V57.5 H242 V85 H293 V100 H227 Z M317,0 H355 A30.75,30.75 0 0 1 355,61.5 H332 V100 H317 Z M332,15 V46.5 H355 A15.75,15.75 0 0 0 355,15 Z M356.47,50.21 L385.66,100 L368.27,100 L343.53,57.79 Z M408,0 L423,0 L423,100 L408,100 Z M415.5,53.31 L460.16,0 L479.73,0 L415.5,76.67 Z M444.48,34.23 L482.7,100 L465.35,100 L431.52,41.77 Z M499,0 H565 V15 H514 V42.5 H557 V57.5 H514 V85 H565 V100 H499 Z M595.01,0 L622,40.48 L648.99,0 L667.01,0 L622,67.52 L576.99,0 Z M614.5,50 L629.5,50 L629.5,100 L614.5,100 Z"/></svg></span>
     <span>© 2026 Overkey · Beirut</span>
   </div>
 </footer>

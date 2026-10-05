@@ -51,6 +51,9 @@
       if (stop) stop();
       scenes.forEach((s, j) => { s.classList.toggle("on", j === k); for (let i = 1; i <= 9; i++) s.classList.remove("s" + i); });
       chips.forEach((c, j) => c.classList.toggle("on", j === k));
+      // on the home page the whole top takes the edition's world: colour, type, mood
+      const world = scenes[k].dataset.world, hero = scenes[k].closest(".hero"), bar = q(".nav");
+      if (world && chips.length) { if (hero) hero.dataset.world = world; if (bar) bar.dataset.world = world; }
       if (rot && chips[k]) { rot.classList.remove("in"); void rot.offsetWidth; rot.textContent = chips[k].dataset.word; rot.classList.add("in"); }
       const frozen = P.get("step");
       if (frozen !== null || still) { const n = frozen !== null ? +frozen : 9; for (let i = 1; i <= 9; i++) scenes[k].classList.toggle("s" + i, i <= n); return; }
@@ -84,6 +87,8 @@
     const pick = (name) => {
       tabs.forEach((b) => { const on = b.dataset.tab === name; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); if (on && bar) bar.textContent = b.textContent; });
       panels.forEach((p) => p.classList.toggle("on", p.dataset.tab === name));
+      const frame = q(".win");
+      if (frame) frame.dataset.cur = name;
     };
     const names = tabs.map((b) => b.dataset.tab);
     const stop = () => clearInterval(auto);
