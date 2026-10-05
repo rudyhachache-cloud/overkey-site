@@ -33,18 +33,31 @@
   );
   qa("[data-count]").forEach((el) => co.observe(el));
 
-  // hero: one claim, from the transcript to the screen, on a loop
-  const scene = q("#scene");
-  if (scene) {
-    const hold = [900, 1100, 1000, 1100, 1900, 1500, 450, 4600]; // how long each step stays
-    const set = (n) => { for (let i = 1; i <= 7; i++) scene.classList.toggle("s" + i, i <= n); };
-    const frozen = P.get("step");
-    if (frozen !== null || still) set(frozen !== null ? +frozen : 7);
-    else {
-      let i = 0;
-      const run = () => { set(i); setTimeout(() => { i = i >= 7 ? 0 : i + 1; run(); }, hold[i]); };
-      run();
-    }
+  // hero scenes: each plays its steps (data-hold = how long each step stays);
+  // with several scenes on the page, one edition hands over to the next
+  const play = (scene, done) => {
+    const hold = scene.dataset.hold.split(",").map(Number), last = hold.length - 1;
+    const set = (n) => { for (let i = 1; i <= 9; i++) scene.classList.toggle("s" + i, i <= n); };
+    let i = 0, t;
+    const run = () => { set(i); t = setTimeout(() => { if (i < last) { i++; run(); } else if (done) done(); else { i = 0; run(); } }, hold[i]); };
+    run();
+    return () => clearTimeout(t);
+  };
+  const scenes = qa(".scene");
+  if (scenes.length) {
+    const chips = qa(".scene-tabs button"), rot = q("#rot");
+    let stop;
+    const show = (k) => {
+      if (stop) stop();
+      scenes.forEach((s, j) => { s.classList.toggle("on", j === k); for (let i = 1; i <= 9; i++) s.classList.remove("s" + i); });
+      chips.forEach((c, j) => c.classList.toggle("on", j === k));
+      if (rot && chips[k]) { rot.classList.remove("in"); void rot.offsetWidth; rot.textContent = chips[k].dataset.word; rot.classList.add("in"); }
+      const frozen = P.get("step");
+      if (frozen !== null || still) { const n = frozen !== null ? +frozen : 9; for (let i = 1; i <= 9; i++) scenes[k].classList.toggle("s" + i, i <= n); return; }
+      stop = play(scenes[k], scenes.length > 1 ? () => show((k + 1) % scenes.length) : null);
+    };
+    chips.forEach((c, j) => c.addEventListener("click", () => show(j)));
+    show(+(P.get("scene") || 0));
   }
 
   // the graphics reel
