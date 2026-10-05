@@ -239,3 +239,20 @@ footer .logo svg { height: 18px; }
 .s3 .toast { opacity: 1; }
 
 @media (max-width: 900px) { .p-film, .p-ask, .p-res, .p-kit { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- the three colours show from the outside ---------- */
+/* landing page: one tab per edition, each always in its own colour and its own shape */
+.scene-tabs { gap: 10px; margin-bottom: 18px; align-items: flex-end; }
+.scene-tabs button { border: 1.5px solid rgba(255, 255, 255, 0.6); padding: 11px 20px; opacity: 0.8; transition: transform 0.25s var(--ease), opacity 0.2s, outline-color 0.3s; outline: 2px solid transparent; outline-offset: 3px; }
+.scene-tabs button[data-w="tv"] { background: #14D06C; color: #0B0D0C; border-radius: 0; font: 600 15px Inter, sans-serif; }
+.scene-tabs button[data-w="arch"] { background: #C8811A; color: #1E2420; border-radius: 11px 11px 0 0; font: 600 16.5px Fraunces, Georgia, serif; }
+.scene-tabs button[data-w="soc"] { background: #7C5CFF; color: #fff; border-radius: 999px; font: 800 15.5px Outfit, sans-serif; letter-spacing: -0.01em; }
+.scene-tabs button[data-w]:hover { opacity: 1; transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.9); }
+.scene-tabs button[data-w].on { opacity: 1; transform: translateY(-3px) scale(1.06); outline-color: var(--hf); border-color: rgba(255, 255, 255, 0.9); }
+/* the menu: each edition carries its colour as a small strap, on every page */
+.nav ul a[href$="tv.html"]::before, .nav ul a[href$="archives.html"]::before, .nav ul a[href$="social.html"]::before { content: ""; display: inline-block; width: 12px; height: 6px; border-radius: 0 0 12px 12px; margin-right: 7px; position: relative; top: -2px; }
+.nav ul a[href$="tv.html"]::before, .nav ul a[href$="tv.html"]::after { background: #14D06C; }
+.nav ul a[href$="archives.html"]::before, .nav ul a[href$="archives.html"]::after { background: #C8811A; }
+.nav ul a[href$="social.html"]::before, .nav ul a[href$="social.html"]::after { background: #7C5CFF; }
+.t-home .nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 4px; background: linear-gradient(90deg, #14D06C 0 33.34%, #C8811A 33.34% 66.67%, #7C5CFF 66.67%); }
+@media (max-width: 900px) { .t-home .nav::after { display: none; } .scene-tabs button { padding: 9px 13px; } }
